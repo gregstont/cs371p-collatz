@@ -8,3 +8,6 @@
 *.gcda
 *.gcno
 *.gcov
+.DS_Store
+RunCollatz
+TestCollatz

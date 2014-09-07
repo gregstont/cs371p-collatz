@@ -31,9 +31,51 @@ std::pair<int, int> collatz_read (std::istream& r) {
 // collatz_eval
 // ------------
 
+int cache[1000000];
+bool use_cache = false;
+
 int collatz_eval (int i, int j) {
-    // <your code>
-    return 1;}
+    using namespace std;
+    assert(i > 0 && i < 1000000 && j > 0 && j < 1000000);
+    int max = -1;
+    if(j < i) //swap if j is smaller
+    {
+        int swap = i;
+        i = j;
+        j = swap;
+    }
+    for(int k = i; k <= j; k++)
+    {
+        int count = 1;
+        int temp_k = k;
+        
+        if(use_cache && cache[k] != -1) {
+            count = cache[k];
+        }
+        else {
+            while(temp_k > 0) {
+                if(temp_k == 1) {
+                    temp_k = -1;
+                }
+                else if(temp_k % 2 == 0) {
+                    temp_k = temp_k / 2;
+                    count++;
+                }
+                else {
+                    temp_k = 3 * temp_k + 1;
+                    count++;
+                }
+            }
+            cache[k] = count;
+        }
+        
+        
+        if(count > max)
+            max = count;
+    }
+    assert(max > 0);
+    return max;
+}
 
 // -------------
 // collatz_print
@@ -47,6 +89,10 @@ void collatz_print (std::ostream& w, int i, int j, int v) {
 // -------------
 
 void collatz_solve (std::istream& r, std::ostream& w) {
+    use_cache = true;
+    for(int i = 0; i < 1000000; i++)
+        cache[i] = -1;
+    
     while (true) {
         const std::pair<int, int> p = collatz_read(r);
         if (p == std::make_pair(0, 0))
@@ -54,4 +100,6 @@ void collatz_solve (std::istream& r, std::ostream& w) {
         const int i = p.first;
         const int j = p.second;
         const int v = collatz_eval(i, j);
-        collatz_print(w, i, j, v);}}
+        collatz_print(w, i, j, v);
+    }
+}

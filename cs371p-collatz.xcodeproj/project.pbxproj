@@ -1,0 +1,231 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3470FA7B19BBE18E005ECF75 /* UVaCollatz.c++ in Sources */ = {isa = PBXBuildFile; fileRef = 3470FA7A19BBE18E005ECF75 /* UVaCollatz.c++ */; };
+		34FDFC6A19BBDF5A0025CFB7 /* Collatz.c++ in Sources */ = {isa = PBXBuildFile; fileRef = 34FDFC6519BBDF5A0025CFB7 /* Collatz.c++ */; };
+		34FDFC6B19BBDF5A0025CFB7 /* RunCollatz.c++ in Sources */ = {isa = PBXBuildFile; fileRef = 34FDFC6819BBDF5A0025CFB7 /* RunCollatz.c++ */; };
+		34FDFC6C19BBDF5A0025CFB7 /* TestCollatz.c++ in Sources */ = {isa = PBXBuildFile; fileRef = 34FDFC6919BBDF5A0025CFB7 /* TestCollatz.c++ */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		34FDFC5619BBDBFB0025CFB7 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		3470FA7819BBDFB4005ECF75 /* cs371p-collatz */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "cs371p-collatz"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3470FA7A19BBE18E005ECF75 /* UVaCollatz.c++ */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "UVaCollatz.c++"; sourceTree = "<group>"; };
+		34FDFC6519BBDF5A0025CFB7 /* Collatz.c++ */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "Collatz.c++"; sourceTree = "<group>"; };
+		34FDFC6619BBDF5A0025CFB7 /* Collatz.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Collatz.h; sourceTree = "<group>"; };
+		34FDFC6719BBDF5A0025CFB7 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		34FDFC6819BBDF5A0025CFB7 /* RunCollatz.c++ */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "RunCollatz.c++"; sourceTree = "<group>"; };
+		34FDFC6919BBDF5A0025CFB7 /* TestCollatz.c++ */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "TestCollatz.c++"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		34FDFC5519BBDBFB0025CFB7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		34FDFC4F19BBDBFB0025CFB7 = {
+			isa = PBXGroup;
+			children = (
+				34FDFC6519BBDF5A0025CFB7 /* Collatz.c++ */,
+				34FDFC6619BBDF5A0025CFB7 /* Collatz.h */,
+				34FDFC6719BBDF5A0025CFB7 /* README.md */,
+				34FDFC6819BBDF5A0025CFB7 /* RunCollatz.c++ */,
+				34FDFC6919BBDF5A0025CFB7 /* TestCollatz.c++ */,
+				3470FA7819BBDFB4005ECF75 /* cs371p-collatz */,
+				3470FA7A19BBE18E005ECF75 /* UVaCollatz.c++ */,
+			);
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		34FDFC5719BBDBFB0025CFB7 /* cs371p-collatz */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 34FDFC6119BBDBFB0025CFB7 /* Build configuration list for PBXNativeTarget "cs371p-collatz" */;
+			buildPhases = (
+				34FDFC5419BBDBFB0025CFB7 /* Sources */,
+				34FDFC5519BBDBFB0025CFB7 /* Frameworks */,
+				34FDFC5619BBDBFB0025CFB7 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "cs371p-collatz";
+			productName = "cs371p-collatz";
+			productReference = 3470FA7819BBDFB4005ECF75 /* cs371p-collatz */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		34FDFC5019BBDBFB0025CFB7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = Taylor;
+			};
+			buildConfigurationList = 34FDFC5319BBDBFB0025CFB7 /* Build configuration list for PBXProject "cs371p-collatz" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 34FDFC4F19BBDBFB0025CFB7;
+			productRefGroup = 34FDFC4F19BBDBFB0025CFB7;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				34FDFC5719BBDBFB0025CFB7 /* cs371p-collatz */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		34FDFC5419BBDBFB0025CFB7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				34FDFC6A19BBDF5A0025CFB7 /* Collatz.c++ in Sources */,
+				34FDFC6B19BBDF5A0025CFB7 /* RunCollatz.c++ in Sources */,
+				3470FA7B19BBE18E005ECF75 /* UVaCollatz.c++ in Sources */,
+				34FDFC6C19BBDF5A0025CFB7 /* TestCollatz.c++ in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		34FDFC5F19BBDBFB0025CFB7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		34FDFC6019BBDBFB0025CFB7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		34FDFC6219BBDBFB0025CFB7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		34FDFC6319BBDBFB0025CFB7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		34FDFC5319BBDBFB0025CFB7 /* Build configuration list for PBXProject "cs371p-collatz" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				34FDFC5F19BBDBFB0025CFB7 /* Debug */,
+				34FDFC6019BBDBFB0025CFB7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		34FDFC6119BBDBFB0025CFB7 /* Build configuration list for PBXNativeTarget "cs371p-collatz" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				34FDFC6219BBDBFB0025CFB7 /* Debug */,
+				34FDFC6319BBDBFB0025CFB7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 34FDFC5019BBDBFB0025CFB7 /* Project object */;
+}
