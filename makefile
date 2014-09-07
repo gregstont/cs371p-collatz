@@ -30,6 +30,9 @@ html: Collatz.h Collatz.c++ RunCollatz.c++ TestCollatz.c++
 
 RunCollatz: Collatz.h Collatz.c++ RunCollatz.c++
 	g++-4.7 -pedantic -std=c++11 -Wall Collatz.c++ RunCollatz.c++ -o RunCollatz
+    
+generate_tests: Collatz.h Collatz.c++ generate_tests.c++
+	g++-4.7 -pedantic -std=c++11 -Wall Collatz.c++ generate_tests.c++ -o generate_tests
 
 RunCollatz.out: RunCollatz RunCollatz.in
 	RunCollatz < RunCollatz.in > RunCollatz.out

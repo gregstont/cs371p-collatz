@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		3470FA7B19BBE18E005ECF75 /* UVaCollatz.c++ in Sources */ = {isa = PBXBuildFile; fileRef = 3470FA7A19BBE18E005ECF75 /* UVaCollatz.c++ */; };
+		3470FA7D19BBE901005ECF75 /* generate_tests.c++ in Sources */ = {isa = PBXBuildFile; fileRef = 3470FA7C19BBE901005ECF75 /* generate_tests.c++ */; };
+		3470FA7F19BBE93B005ECF75 /* makefile in Sources */ = {isa = PBXBuildFile; fileRef = 3470FA7E19BBE93B005ECF75 /* makefile */; };
 		34FDFC6A19BBDF5A0025CFB7 /* Collatz.c++ in Sources */ = {isa = PBXBuildFile; fileRef = 34FDFC6519BBDF5A0025CFB7 /* Collatz.c++ */; };
 		34FDFC6B19BBDF5A0025CFB7 /* RunCollatz.c++ in Sources */ = {isa = PBXBuildFile; fileRef = 34FDFC6819BBDF5A0025CFB7 /* RunCollatz.c++ */; };
 		34FDFC6C19BBDF5A0025CFB7 /* TestCollatz.c++ in Sources */ = {isa = PBXBuildFile; fileRef = 34FDFC6919BBDF5A0025CFB7 /* TestCollatz.c++ */; };
@@ -28,6 +30,8 @@
 /* Begin PBXFileReference section */
 		3470FA7819BBDFB4005ECF75 /* cs371p-collatz */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "cs371p-collatz"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3470FA7A19BBE18E005ECF75 /* UVaCollatz.c++ */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "UVaCollatz.c++"; sourceTree = "<group>"; };
+		3470FA7C19BBE901005ECF75 /* generate_tests.c++ */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "generate_tests.c++"; sourceTree = "<group>"; };
+		3470FA7E19BBE93B005ECF75 /* makefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.make; path = makefile; sourceTree = "<group>"; };
 		34FDFC6519BBDF5A0025CFB7 /* Collatz.c++ */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "Collatz.c++"; sourceTree = "<group>"; };
 		34FDFC6619BBDF5A0025CFB7 /* Collatz.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Collatz.h; sourceTree = "<group>"; };
 		34FDFC6719BBDF5A0025CFB7 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
@@ -56,6 +60,8 @@
 				34FDFC6919BBDF5A0025CFB7 /* TestCollatz.c++ */,
 				3470FA7819BBDFB4005ECF75 /* cs371p-collatz */,
 				3470FA7A19BBE18E005ECF75 /* UVaCollatz.c++ */,
+				3470FA7C19BBE901005ECF75 /* generate_tests.c++ */,
+				3470FA7E19BBE93B005ECF75 /* makefile */,
 			);
 			sourceTree = "<group>";
 		};
@@ -111,6 +117,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				34FDFC6A19BBDF5A0025CFB7 /* Collatz.c++ in Sources */,
+				3470FA7D19BBE901005ECF75 /* generate_tests.c++ in Sources */,
+				3470FA7F19BBE93B005ECF75 /* makefile in Sources */,
 				34FDFC6B19BBDF5A0025CFB7 /* RunCollatz.c++ in Sources */,
 				3470FA7B19BBE18E005ECF75 /* UVaCollatz.c++ in Sources */,
 				34FDFC6C19BBDF5A0025CFB7 /* TestCollatz.c++ in Sources */,
