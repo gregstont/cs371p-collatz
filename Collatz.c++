@@ -50,7 +50,7 @@ int collatz_eval (int i, int j) {
     
     for(int k = i; k <= j; k++) {
         
-        int count = 1;
+        int count = 1; //the cycle length
         long temp_k = k;
         
         if(use_cache && cache[k] != -1) {
@@ -61,11 +61,11 @@ int collatz_eval (int i, int j) {
                 if(temp_k == 1) {
                     temp_k = -1;
                 }
-                else if(temp_k % 2 == 0) {
-                    temp_k = temp_k >> 1;
+                else if(temp_k % 2 == 0) { //even
+                    temp_k = temp_k >> 1; //divide by 2
                     ++count;
                 }
-                else {
+                else { //odd
                     //temp_k = 3 * temp_k + 1;
                     temp_k = temp_k + (temp_k >> 1) + 1; //optimization from quiz
                     ++count;
@@ -96,6 +96,8 @@ void collatz_print (std::ostream& w, int i, int j, int v) {
 // -------------
 
 void collatz_solve (std::istream& r, std::ostream& w) {
+    
+    //initialize the cache
     use_cache = true;
     for(int i = 0; i < 1000001; i++)
         cache[i] = -1;

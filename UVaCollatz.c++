@@ -37,7 +37,7 @@ int cache[1000000];
 
 int collatz_eval (int i, int j) {
     using namespace std;
-    assert(i > 0 && i < 1000000 && j > 0 && j < 1000000);
+    assert(i > 0 && i < 1000001 && j > 0 && j < 1000001);
     int max = -1;
     if(j < i) //swap if j is smaller
     {
@@ -49,9 +49,9 @@ int collatz_eval (int i, int j) {
     if(i < j >> 1) //optimization from quiz (max_cycle_length(10, 100) = max_cycle_length(50, 100))
         i = j >> 1;
     
-    for(int k = i; k <= j; k++)
-    {
-        int count = 1;
+    for(int k = i; k <= j; k++) {
+        
+        int count = 1; //the cycle length
         long temp_k = k;
         
         if(use_cache && cache[k] != -1) {
@@ -62,11 +62,11 @@ int collatz_eval (int i, int j) {
                 if(temp_k == 1) {
                     temp_k = -1;
                 }
-                else if(temp_k % 2 == 0) {
-                    temp_k = temp_k >> 1;
+                else if(temp_k % 2 == 0) { //even
+                    temp_k = temp_k >> 1; //divide by 2
                     ++count;
                 }
-                else {
+                else { //odd
                     //temp_k = 3 * temp_k + 1;
                     temp_k = temp_k + (temp_k >> 1) + 1; //optimization from quiz
                     ++count;
