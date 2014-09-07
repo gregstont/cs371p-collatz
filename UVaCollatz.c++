@@ -26,14 +26,17 @@ std::pair<int, int> collatz_read (std::istream& r) {
         return std::make_pair(0, 0);
     int j;
     r >> j;
-    return std::make_pair(i, j);}
+    return std::make_pair(i, j);
+}
 
 // ------------
 // collatz_eval
 // ------------
+bool use_cache;
 int cache[1000000];
 
 int collatz_eval (int i, int j) {
+    using namespace std;
     assert(i > 0 && i < 1000000 && j > 0 && j < 1000000);
     int max = -1;
     if(j < i) //swap if j is smaller
@@ -42,12 +45,16 @@ int collatz_eval (int i, int j) {
         i = j;
         j = swap;
     }
+    
+    if(i < j >> 1) //optimization from quiz (max_cycle_length(10, 100) = max_cycle_length(50, 100))
+        i = j >> 1;
+    
     for(int k = i; k <= j; k++)
     {
         int count = 1;
         long temp_k = k;
         
-        if(cache[k] != -1) {
+        if(use_cache && cache[k] != -1) {
             count = cache[k];
         }
         else {
@@ -55,17 +62,15 @@ int collatz_eval (int i, int j) {
                 if(temp_k == 1) {
                     temp_k = -1;
                 }
-                else if(temp_k % 2 == 0) { //even
-                    temp_k = temp_k / 2;
+                else if(temp_k % 2 == 0) {
+                    temp_k = temp_k >> 1;
                     ++count;
-                    //count++;
                 }
-                else { //odd
+                else {
                     //temp_k = 3 * temp_k + 1;
-                    temp_k = temp_k + (temp_k >> 1) + 1;
+                    temp_k = temp_k + (temp_k >> 1) + 1; //optimization from quiz
                     ++count;
                     ++count;
-                    //count++;
                 }
             }
             cache[k] = count;
@@ -80,27 +85,33 @@ int collatz_eval (int i, int j) {
 }
 
 
+
 // -------------
 // collatz_print
 // -------------
 
 void collatz_print (std::ostream& w, int i, int j, int v) {
-    w << i << " " << j << " " << v << std::endl;}
+    w << i << " " << j << " " << v << std::endl;
+}
 
 // -------------
 // collatz_solve
 // -------------
 
 void collatz_solve (std::istream& r, std::ostream& w) {
-    //for(int i = 0; i < 1000000; i++)
-    //    cache[i] = -1;
+    use_cache = true;
+    for(int i = 0; i < 1000000; i++)
+        cache[i] = -1;
+    
     memset(&cache, -1, 4000000);
     while (true) {
         const std::pair<int, int> p = collatz_read(r);
         if (p == std::make_pair(0, 0))
             return;
         const int v = collatz_eval(p.first, p.second);
-        collatz_print(w, p.first, p.second, v);}}
+        collatz_print(w, p.first, p.second, v);
+    }
+}
 
 // -------------------------------
 // projects/collatz/RunCollatz.c++
@@ -154,7 +165,8 @@ void collatz_solve (std::istream& r, std::ostream& w) {
 int main () {
     using namespace std;
     collatz_solve(cin, cout);
-    return 0;}
+    return 0;
+}
 
 /*
  % g++-4.7 -fprofile-arcs -ftest-coverage -pedantic -std=c++11 -Wall Collatz.c++ RunCollatz.c++ -o RunCollatz

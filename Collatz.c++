@@ -44,8 +44,12 @@ int collatz_eval (int i, int j) {
         i = j;
         j = swap;
     }
-    for(int k = i; k <= j; k++)
-    {
+    
+    if(i < j >> 1) //optimization from quiz (max_cycle_length(10, 100) = max_cycle_length(50, 100))
+        i = j >> 1;
+    
+    for(int k = i; k <= j; k++) {
+        
         int count = 1;
         long temp_k = k;
         
@@ -84,7 +88,8 @@ int collatz_eval (int i, int j) {
 // -------------
 
 void collatz_print (std::ostream& w, int i, int j, int v) {
-    w << i << " " << j << " " << v << std::endl;}
+    w << i << " " << j << " " << v << std::endl;
+}
 
 // -------------
 // collatz_solve
