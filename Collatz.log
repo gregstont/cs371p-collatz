@@ -1,0 +1,53 @@
+commit 9e632d782983819c8f5832650d9643936d4a1a4f
+Author: gregstont <gregstont@gmail.com>
+Date:   Sat Sep 6 22:53:05 2014 -0500
+
+    closes #12; documentation added
+
+commit 28b92cda2ba572f8c281a76fc46640202c2ccfa9
+Author: gregstont <gregstont@gmail.com>
+Date:   Sat Sep 6 22:49:42 2014 -0500
+
+    closes #25; fixed initialization bug
+
+commit 59972bbf5e5e73ff8448d32e5b0988b7c825801a
+Author: gregstont <gregstont@gmail.com>
+Date:   Sat Sep 6 22:40:16 2014 -0500
+
+    closes #15, closes #24; added more comments
+
+commit 339f12748128c02db3d9d6502805acecb5d06589
+Author: gregstont <gregstont@gmail.com>
+Date:   Sat Sep 6 22:33:16 2014 -0500
+
+    closes #22, closes #23; added TestCollatz.out
+
+commit c4507cd822fcb8e51dab403d6c62d2c7fd8e33e8
+Author: gregstont <gregstont@gmail.com>
+Date:   Sat Sep 6 20:46:37 2014 -0500
+
+    closes #4, closes #21; added second optimization from quiz
+
+commit efeb7d265a59c4e39f5b4262e052aef22b9d54c3
+Author: gregstont <gregstont@gmail.com>
+Date:   Sat Sep 6 20:30:53 2014 -0500
+
+    closes #9, closes #17; acceptance tests added
+
+commit ff8b29ffc39916c0ccaa20d1d6cc6d91163bf1af
+Author: gregstont <gregstont@gmail.com>
+Date:   Sat Sep 6 20:10:52 2014 -0500
+
+    closes #18, closes #19, closes #20; added optimizations and fixed overflow bug
+
+commit 9f9c513704a6083bd9cdc12297533538268c1cac
+Author: gregstont <gregstont@gmail.com>
+Date:   Sat Sep 6 19:58:24 2014 -0500
+
+    closes #6, closes #7, closes #8, closes #11; code copied over from last semester
+
+commit 2fb67d41e5181fa49a2635ba40c986a785bf7e9f
+Author: gregstont <gregstont@gmail.com>
+Date:   Thu Sep 4 14:36:14 2014 -0500
+
+    closes #1, initial commit
