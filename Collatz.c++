@@ -31,12 +31,21 @@ std::pair<int, int> collatz_read (std::istream& r) {
 // collatz_eval
 // ------------
 
+
 int cache[1000001];
-bool use_cache = false;
+bool use_cache;
+bool cache_init;
 
 int collatz_eval (int i, int j) {
     using namespace std;
     assert(i > 0 && i < 1000001 && j > 0 && j < 1000001);
+    
+    if(!cache_init) { //fixes initialization bug when run with test harness
+        for(int i = 0; i < 1000000; ++i)
+            cache[i] = -1;
+        cache_init = true;
+    }
+    
     int max = -1;
     if(j < i) //swap if j is smaller
     {
@@ -98,9 +107,7 @@ void collatz_print (std::ostream& w, int i, int j, int v) {
 void collatz_solve (std::istream& r, std::ostream& w) {
     
     //initialize the cache
-    use_cache = true;
-    for(int i = 0; i < 1000001; i++)
-        cache[i] = -1;
+    cache_init = false;
     
     while (true) {
         const std::pair<int, int> p = collatz_read(r);
