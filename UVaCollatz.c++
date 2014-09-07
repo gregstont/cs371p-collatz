@@ -45,7 +45,7 @@ int collatz_eval (int i, int j) {
     for(int k = i; k <= j; k++)
     {
         int count = 1;
-        int temp_k = k;
+        long temp_k = k;
         
         if(cache[k] != -1) {
             count = cache[k];
@@ -55,13 +55,17 @@ int collatz_eval (int i, int j) {
                 if(temp_k == 1) {
                     temp_k = -1;
                 }
-                else if(temp_k % 2 == 0) {
+                else if(temp_k % 2 == 0) { //even
                     temp_k = temp_k / 2;
-                    count++;
+                    ++count;
+                    //count++;
                 }
-                else {
-                    temp_k = 3 * temp_k + 1;
-                    count++;
+                else { //odd
+                    //temp_k = 3 * temp_k + 1;
+                    temp_k = temp_k + (temp_k >> 1) + 1;
+                    ++count;
+                    ++count;
+                    //count++;
                 }
             }
             cache[k] = count;

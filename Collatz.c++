@@ -47,7 +47,7 @@ int collatz_eval (int i, int j) {
     for(int k = i; k <= j; k++)
     {
         int count = 1;
-        int temp_k = k;
+        long temp_k = k;
         
         if(use_cache && cache[k] != -1) {
             count = cache[k];
@@ -58,12 +58,14 @@ int collatz_eval (int i, int j) {
                     temp_k = -1;
                 }
                 else if(temp_k % 2 == 0) {
-                    temp_k = temp_k / 2;
-                    count++;
+                    temp_k = temp_k >> 1;
+                    ++count;
                 }
                 else {
-                    temp_k = 3 * temp_k + 1;
-                    count++;
+                    //temp_k = 3 * temp_k + 1;
+                    temp_k = temp_k + (temp_k >> 1) + 1; //optimization from quiz
+                    ++count;
+                    ++count;
                 }
             }
             cache[k] = count;
