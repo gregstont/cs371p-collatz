@@ -1,3 +1,15 @@
+commit fe66de672f4b28d278f6507aa6c857e282fb9de6
+Author: gregstont <gregstont@gmail.com>
+Date:   Wed Sep 10 23:36:47 2014 -0500
+
+    fixed tests to not overflow
+
+commit 251015c7c48719cb2d7ffe14c14310570efb3de2
+Author: gregstont <gregstont@gmail.com>
+Date:   Sat Sep 6 22:55:30 2014 -0500
+
+    closes #13; added log
+
 commit 9e632d782983819c8f5832650d9643936d4a1a4f
 Author: gregstont <gregstont@gmail.com>
 Date:   Sat Sep 6 22:53:05 2014 -0500
