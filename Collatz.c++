@@ -32,13 +32,12 @@ std::pair<int, int> collatz_read (std::istream& r) {
 // ------------
 
 
-int cache[1000001];
-bool use_cache;
-bool cache_init;
+int cache[1000000];
+bool cache_init = false;
 
 int collatz_eval (int i, int j) {
     using namespace std;
-    assert(i > 0 && i < 1000001 && j > 0 && j < 1000001);
+    assert(i > 0 && i < 1000000 && j > 0 && j < 1000000);
     
     if(!cache_init) { //fixes initialization bug when run with test harness
         for(int i = 0; i < 1000000; ++i)
@@ -62,7 +61,7 @@ int collatz_eval (int i, int j) {
         int count = 1; //the cycle length
         long temp_k = k;
         
-        if(use_cache && cache[k] != -1) {
+        if(cache[k] != -1) {
             count = cache[k];
         }
         else {

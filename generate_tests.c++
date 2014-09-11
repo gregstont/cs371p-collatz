@@ -5,13 +5,13 @@
 #include "Collatz.h"
 
 
-#define SLOT_SIZE 100
+#define SLOT_SIZE 150
 
 /**
  * generate the acceptance tests file
  */
 
-#define MAX_NUM 200000
+#define MAX_NUM 90000
 
 void generate_acceptance_tests() {
     using namespace std;
@@ -21,7 +21,7 @@ void generate_acceptance_tests() {
     cout << "1 1" << endl;
     cout << "1 2" << endl;
     cout << "9 9" << endl;
-    cout << "999999 999999" << endl;
+    //cout << "999999 999999" << endl;
     
     for(int i = 0; i < 1000; i++) {
         cout << rand() % MAX_NUM + 1 << " " << rand() % MAX_NUM + 1 << endl;
